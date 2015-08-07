@@ -11,6 +11,20 @@ Size (4 bytes) - size of PDC image or sequence following the header in bytes
 Currently the following SVG elements are supported:
 g, layer, path, rect, polyline, polygon, line, circle,
 
+NOTES that may not be accurate.
+http://forums.getpebble.com/discussion/comment/140444/#Comment_140444
+
+  * All stroke widths have to be an integer number of pixels.  In fact, just to be safe, make everything integers.
+  * svg2pdc doesn't like the style attribute, so you have to convert style="stroke:#000000;fill:none" to stroke="#000000" fill="none".  Inkscape's Save As Optimized SVG will do this, but that has other problems, namely ...
+  * groups with the g element don't propagate their attributes down to child elements.  When an element like path has no attribute like stroke on the actual element, the script ignores the entire path.  Copy-and-pasting those attributes from the parent group onto the children does the trick.
+
+http://forums.getpebble.com/discussion/23792/a-few-thoughts-about-svg2pdc-py
+
+  * The script expects the viewBox tag to be present although it's optional.
+  * My SVG file contains a stroke tag for the rect containing "rgb(0%, 0%, 0%)" which isn't parsed at all. Currently the python script seems to expect a color to be given in #RRGGBB.
+  * My SVG file contains a stroke-width="2.0" but the script expects an int: stroke_width = int(element.get('stroke-width'))
+  * The rx and ry tags are not supported all tough the pebble is capable drawing round rects. Thats because rects are converted into a path but I wonder if there are plans to support these tags in future releases.
+
 '''
 
 import xml.etree.ElementTree as ET
