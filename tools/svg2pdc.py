@@ -27,8 +27,9 @@ http://forums.getpebble.com/discussion/23792/a-few-thoughts-about-svg2pdc-py
 
 '''
 
+import svg.path  # https://pypi.python.org/pypi/svg.path version 2.0 works
+
 import xml.etree.ElementTree as ET
-import svg.path
 import argparse
 from struct import pack
 import os
