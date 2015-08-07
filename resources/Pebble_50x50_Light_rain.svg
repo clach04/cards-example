@@ -23,9 +23,19 @@
             points="43.5,25.5 47.5,21.5 47.5,15.5 43.5,11.5 31.5,11.5 27.5,7.5 14.5,7.5 9.5,12.5 5.5,12.5 1.5,16.5 1.5,21.5 5.5,25.5 	"
             id="cloud"
         />
+        <rect
+            id="bluetooth_blue_shape"
+            y="0.73728812"
+            x="10.771187"
+            ry="291"
+            height="49"
+            width="32"
+            fill="#0a3d91"
+        />
+
 	
         <polyline
-            fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+            fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
             points="10,13 16,13 21,16 	"
             id="cloud_inside_line"
             />
