@@ -25,7 +25,7 @@
         />
 	
         <polyline
-            fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+            fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
             points="10,13 16,13 21,16 	"
             id="cloud_inside_line"
             />
